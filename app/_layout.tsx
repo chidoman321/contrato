@@ -8,6 +8,8 @@ import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
 import { useEffect, useCallback } from "react";
 import { useColorScheme } from "react-native";
+import { I18nextProvider } from "react-i18next";
+import "../internationalization/i18n";
 
 export {
   // Catch any errors thrown by the Layout component.
