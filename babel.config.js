@@ -8,5 +8,10 @@ module.exports = function (api) {
       "module:react-native-dotenv",
       "nativewind/babel",
     ],
+    env: {
+      production: {
+        plugins: ['react-native-paper/babel'],
+      },
+    }
   };
 };

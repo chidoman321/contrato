@@ -9,6 +9,7 @@ import { SplashScreen, Stack } from "expo-router";
 import { useEffect, useCallback } from "react";
 import { useColorScheme } from "react-native";
 import { I18nextProvider } from "react-i18next";
+import { PaperProvider } from 'react-native-paper';
 import "../internationalization/i18n";
 
 export {
@@ -49,10 +50,13 @@ export default function RootLayout() {
   }
 
   return <RootLayoutNav />;
+  
 }
 
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
-
-  return <Stack />;
+  return  (
+    <PaperProvider>
+            <Stack />
+      </PaperProvider>);
 }
